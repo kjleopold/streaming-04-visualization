@@ -2,7 +2,7 @@
 
 Creates, inspects, and optionally deletes Kafka topics.
 
-Author: Denise Case
+Author: Denise Case, Kellie Leopold
 Date: 2026-05
 
 Run this BEFORE the producer and consumer to ensure the topic exists.
@@ -11,17 +11,14 @@ Run this AFTER to delete the topic and start fresh.
 Terminal commands to run from the root project folder:
 
   Create the topic (safe to run repeatedly):
-    uv run python -m streaming.admin
+    uv run python -m streaming.kafka_admin_kjleopold
 
   Delete the topic and recreate it (start fresh):
-    uv run python -m streaming.admin --recreate
+    uv run python -m streaming.kafka_admin_kjleopold --recreate
 
   Delete the topic only:
-    uv run python -m streaming.admin --delete
+    uv run python -m streaming.kafka_admin_kjleopold --delete
 
-OBS:
-  Don't edit this file - it should remain a working example.
-  Copy it, rename it admin_yourname.py, and modify your copy.
 
 NOTE ON KAFKA STARTUP NOISE:
   You may see lines like:

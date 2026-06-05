@@ -11,16 +11,13 @@ Work up to see how it all fits together.
 Many functions are standard helpers
 and should not need project-specific modifications.
 
-Author: Denise Case
+Author: Denise Case, Kellie Leopold
 Date: 2026-05
 
 Terminal command to run this file from the root project folder:
 
-    uv run python -m streaming.kafka_producer_case
+    uv run python -m streaming.kafka_producer_kjleopold
 
-OBS:
-  Don't edit this file - it should remain a working example.
-  Copy it, rename it producer_yourname.py, and modify your copy.
 """
 
 # === DECLARE IMPORTS ===
