@@ -6,7 +6,7 @@ This module creates a live line chart of sale total by message.
 The chart opens in a window while the consumer is running and updates
 as each message is consumed.
 
-Author: Denise Case
+Author: Denise Case, Kellie Leopold
 Date: 2026-05
 
 OBS:
@@ -113,6 +113,7 @@ def update_live_chart(
     # which contains the sale total for that message.
     new_y = float(message["total"])
     y_values.append(new_y)
+    average_sale = sum(y_values) / len(y_values)
 
     # Clear the axis
     axis.clear()
@@ -121,9 +122,11 @@ def update_live_chart(
     # Set the marker to "o" to show points at each message.
     # Options include "o" for circles, "s" for squares, "^" for triangles, and more.
     axis.plot(x_values, y_values, marker="o")
+    axis.axhline(y=average_sale, linestyle="--", label="Average")
+    axis.legend()
 
     # Set the title and axis labels again after clearing the axis.
-    axis.set_title("Sales Total by Message")
+    axis.set_title(f"Sales Total by Message (Avg: ${average_sale:.2f})")
     axis.set_xlabel("Message")
     axis.set_ylabel("Sale Total ($)")
 

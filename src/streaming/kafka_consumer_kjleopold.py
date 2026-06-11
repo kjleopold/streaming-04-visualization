@@ -51,12 +51,12 @@ from dotenv import load_dotenv
 
 from streaming.core.utils import log_env_vars
 from streaming.data_engineering.derived_fields import enrich_message
-from streaming.data_validation.data_contract_case import (
+from streaming.data_validation.data_contract_kjleopold import (
     CONSUMED_FIELDNAMES,
     SALES_REQUIRED_FIELDS,
     validate_required_fields,
 )
-from streaming.visualizations.live_visualizations_case import (
+from streaming.visualizations.live_visualizations_kjleopold import (
     close_live_chart,
     init_live_chart,
     save_live_chart,
