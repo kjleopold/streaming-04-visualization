@@ -106,7 +106,7 @@ def update_live_chart(
     # so it works great as a simple x-axis value
     # to show the order of messages.
     # Create a new x value from the message offset.
-    new_x = int(message["_kafka_offset"])
+    new_x = len(x_values)
     x_values.append(new_x)
 
     # Create a new y value from the "total" field in the message,

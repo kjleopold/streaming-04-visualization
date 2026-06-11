@@ -301,6 +301,9 @@ def process_message(
     # Update running statistics with the new total.
     stats.update(enriched["total"])
 
+    if enriched["total"] > stats.mean:
+        LOG.info("HIGH VALUE SALE")
+
     # NEW: Update the live chart with the new message.
     update_live_chart(
         figure=figure,
